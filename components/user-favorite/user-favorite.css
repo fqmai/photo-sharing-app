@@ -1,0 +1,14 @@
+.deleteFavoritebutton {
+	visibility: hidden;
+	font-size: 20px;
+	color: gray;
+	text-decoration: none;
+}
+
+.cs142-favorite-card:hover {
+	background: lightgray;
+}
+
+.cs142-favorite-card:hover .deleteFavoritebutton {
+	visibility: visible;
+}

@@ -1,0 +1,32 @@
+
+		<div layout="column">
+			<div ng-repeat="photo in photos" class="cs142-photos-photo">
+				<img ng-src="../../images/{{photo.file_name}}">
+				<div layout="row" class="cs142-photos-dateAndNewComment">
+					<div class="cs142-photos-date">Created Time: {{photo.date_time}}</div>
+					<div class="cs142-photos-newComment" ng-click="newCommentDialog($event, photo._id)"> <span class="fa fa-pencil"></span> NEW COMMENT</div>
+					<div class="cs142-photos-deletePhoto" ng-click="deletePhotoDialog($event, photo._id)" ng-show="photo.user_id === main.login_id" ><span class="fa fa-trash"></span> DELETE PHOTO</div>
+					<div class="symbols" layout="row"> 
+
+					<div class="symbol"><i class="fa fa-thumbs-up dislike" ng-click="like(photo)" ng-if="!photo.isliked"></i></div>
+					<div class="symbol"><i class="fa fa-thumbs-up like" ng-click="like(photo)" ng-if="photo.isliked"></i></div>
+					<div class="symbol numOfLikes">{{photo.numOfLikes}}</div>
+					<div class="symbol"><i class="fa fa-heart unfavorite" ng-click="favorite(photo)" ng-if="!photo.isFavorited"></i></div>
+					<div class="symbol"><i class="fa fa-heart favorite" ng-if="photo.isFavorited"></i></div>
+
+					</div>
+				</div>
+
+				<div ng-repeat="comment in photo.comments" layout="column">
+					<div layout="column" class="cs142-photos-comment">
+						<p class="cs142-photos-comments-name">
+							<a ng-href="/photo-share.html#!/users/{{comment.user._id}}">{{comment.user.first_name}} {{comment.user.last_name}}</a>
+							<span class="fa fa-trash cs142-photos-comment-delete" ng-show="comment.user._id === main.login_id" ng-click="deleteCommentDialog($event, photo._id, comment._id)"></span>
+						</p>
+						<div class="cs142-photos-comments-date date">{{comment.date_time}}</div>
+						<div class="cs142-photos-comments-content">{{comment.comment}}</div>
+					</div>
+
+				</div>
+			</div>
+		</div>

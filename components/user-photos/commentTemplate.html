@@ -1,0 +1,9 @@
+<form name="commentForm">
+<md-input-container class="md-block">
+    <md-input-container class="md-block">
+        <label>Comments</label>
+        <textarea required ng-model="newComment" md-maxlength="1000" rows="5" cols="80"></textarea>
+
+    </md-input-container>
+    <md-button ng-click="postComment(newComment)">SUBMIT</md-button>
+</form>

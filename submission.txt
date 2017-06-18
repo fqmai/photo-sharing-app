@@ -1,0 +1,61 @@
+Project #8 - Submission form
+
+Please fill in this form and submit it with your project #8.
+
+Enter no more than 5 user stories that you did for the assignment that you would like to be
+graded on. For each story include the following information:
+
+Story number and name:
+Story points:
+Brief description to see the story in action:
+
+Total Story Points:
+
+Marketing Video URL (ensure permissions are set to public viewing):
+
+Is it OK with you if we post your Marketing Video URL on the class discussion forum?
+
+Any special instructions for Grading (should be easy to run app from new machine):
+
+
+************************************ Example *******************
+* As an example for if you did only story 5 your file would look like:
+* 
+* Story number and name:  1 - Extend user profile detail with usage
+* Story points:  3
+* Brief description to see the story in action:
+* In the user detail page, we could see the most recent posted photo of the user and the photo
+* that has most comments. Click on either of them will lead you to the photo page of the user.
+* 
+*
+* Story number and name:  5 - Deleting Comments, Photos, and users
+* Story points:  4
+* Brief description to see the story in action:
+* Click on the ¡°Delete Photo¡±, the trash icon of a comment or the ¡°Delete Account¡± buttons could
+* delete a photo, a comment or the current logged in account.
+* 
+* 
+* 
+* Story number and name:  6 - Photo like votes
+* Story points:  4
+* Brief description to see the story in action:
+* Each logged-in user could vote likes for each photo by click at the thumbs-up icon. The number 
+* of like votes is shown next to the thumbs-up icon.
+* 
+*
+* Story number and name:  7 - Favorite lists of photos for users 
+* Story points:  6
+* Brief description to see the story in action:
+* Each logged-in user could favorite photos. Though the button ¡°FAVORITE¡± on the toolbar, the user
+* could see all the photos that he/she favorites. Clicking on the trash icon could delete that favorite.
+* And you could see a bigger photo when you click at the thumbnail-size photo.
+* 
+*
+* Total Story Points: 17
+*
+*
+* Marketing Video URL (ensure permissions are set to public viewing): https://youtu.be/kSIwsdrSwcs ---
+* 
+* Is it OK with you if we post your Marketing Video URL on the class discussion forum? Yes
+* 
+* Instructions for Grading (should be easy to run app from new machine): None

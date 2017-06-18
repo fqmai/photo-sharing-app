@@ -1,0 +1,14 @@
+<!doctype html>
+<html ng-app="cs142App" ng-controller="UserListController">
+    <head>
+
+        <title>{{main.title || "CS142 Class Project"}}</title>
+    </head>
+
+    <body layout="column">    	
+		<a class = "cs142-list-item" ng-href="/photo-share.html#!/users/{{x._id}}" layout="column" ng-repeat="x in userList">
+		{{x.first_name}} {{x.last_name}}
+		</a>
+
+    </body>
+</html>

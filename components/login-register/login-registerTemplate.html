@@ -1,0 +1,86 @@
+<div class="cs142-login-register">
+    <form name="loginForm" class="loginForm" layout="column">
+        <md-input-container class="md-block">
+            <div><label>Username</label></div>
+            <div><input ng-model="login_name"></div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <div><label>Password</label></div>
+            <div><input ng-model="password" type="password"></div>
+        </md-input-container>
+
+        <div class="buttonContainer">
+            <md-button id="loginButton" ng-click="login()">LOG IN</md-button>
+            <md-button id="registerButton" ng-click="showRegister()">{{main.showRegister}}</md-button>
+        </div>
+    </form>
+
+    <form ng-show='main.showRegister === "HIDE REGISTER"' name="registerForm" class="registerForm">
+        <md-input-container class="md-block">
+            <label>Login Name</label>
+            <input name="loginName" ng-model="loginName" required=""/>
+            <div ng-show="registerForm.submitted || registerForm.loginName.$touched" ng-messages="registerForm.loginName.$error">
+                <div ng-show="registerForm.loginName.$error.required">This field is required.</div>   
+            </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input required name="newPassword" type="password" ng-model="newPassword" />
+            <div ng-show="registerForm.submitted || registerForm.newPassword.$touched" ng-messages="registerForm.newPassword.$error">
+                <div ng-show="registerForm.newPassword.$error.required">This field is required.</div>  
+            </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>Confirm Password</label>
+            <input required name="confirmPassword" type="password" ng-pattern="{{newPassword}}" ng-model="confirmPassword" />
+            <div ng-show="registerForm.submitted || registerForm.confirmPassword.$touched" ng-messages="registerForm.confirmPassword.$error">
+                <p ng-if="registerForm.confirmPassword.$error.required">This field is required.</p> 
+                <p ng-if="registerForm.confirmPassword.$error.pattern">Passwords do not match.</p>     
+            </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+            <label>First Name</label>
+            <input required name="firstName" ng-model="firstName" />
+            <div ng-show="registerForm.submitted || registerForm.firstName.$touched" ng-messages="registerForm.firstName.$error">
+                <p ng-show="registerForm.firstName.$error.required">This field is required.</p> 
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Last Name</label>
+            <input required name="lastName" ng-model="lastName" />
+            <div ng-show="registerForm.submitted || registerForm.lastName.$touched" ng-messages="registerForm.lastName.$error">
+                <p ng-if="registerForm.lastName.$error.required">This field is required.</p> 
+            </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Location</label>
+            <input name="location" ng-model="location" />
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Occupation</label>
+            <input name="occupation" ng-model="occupation" />
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Description</label>
+            <input name="description" ng-model="description" />
+        </md-input-container>
+
+            <md-button id="submitButton" ng-click="register({
+                                        first_name: firstName, 
+                                        last_name: lastName,
+                                        location: location, 
+                                        description: description,
+                                        occupation: occupation,
+                                        login_name: loginName, 
+                                        password: newPassword
+                                    })">
+                SUBMIT
+            </md-button>
+
+    </form>
+
+</div>

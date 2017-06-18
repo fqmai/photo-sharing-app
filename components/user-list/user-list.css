@@ -1,0 +1,19 @@
+.cs142-list-item {
+	height: 70px;
+	line-height: 70px;   
+	text-align: center;
+	font-size: 22px;
+	text-decoration: none;
+	border: 2px;
+	color: grey;
+	font-weight: bold;
+}
+
+.cs142-list-item:hover {
+	background: #DCDCDC;
+	color: white;
+}
+
+.cs142-list-item:active {
+	color: #66CDAA;
+}
