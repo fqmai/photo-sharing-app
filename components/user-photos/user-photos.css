@@ -1,0 +1,94 @@
+body {
+	position: relative;
+}
+
+img {
+	margin: 8px;
+	border: 1px solid black;
+	padding: 3px;
+	box-shadow: box-shadow: 5px 5px 5px #888888;
+	max-width: 885px;
+}
+
+.cs142-photos-photo {
+	margin-bottom: 20px;
+}
+
+.cs142-photos-dateAndNewComment {
+	margin: 4px 8px 8px 8px;
+
+}
+
+.cs142-photos-date {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+
+.cs142-photos-newComment {
+	background: #9ACD32;
+	padding: 8px;
+	margin: 0 10px 0 10px;
+	color: white;
+}
+
+.cs142-photos-deletePhoto {
+	background: lightgrey;
+	padding: 8px;
+	margin: 0 10px 0 10px;
+	color: white;
+}
+
+.cs142-photos-comment-delete {
+	visibility: hidden;
+}
+
+.cs142-photos-comment:hover p .cs142-photos-comment-delete {
+	visibility: visible;
+}
+
+.cs142-photos-newComment:hover {
+	color: #20B2AA;
+}
+
+.cs142-photos-deletePhoto:hover {
+	color: #20B2AA;
+}
+
+.cs142-photos-comment {
+	margin-left: 0 8px 0 8px;
+	padding: 5px 10px 5px 10px;
+}
+
+.cs142-photos-comment:hover {
+	background: #EFEFEF;
+}
+
+.cs142-photos-comments-name,.cs142-photos-comments-date,.cs142-photos-comments-content {
+	padding: 3px;
+}
+
+.cs142-photos-comments-name {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+
+.symbol {
+	font-size: 18px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.numOfLikes {
+	margin-left: 8px;
+	margin-right: 15px;
+}
+
+.like,.favorite {
+	color: red;
+}
+
+.dislike,.unfavorite {
+	color: gray;
+}

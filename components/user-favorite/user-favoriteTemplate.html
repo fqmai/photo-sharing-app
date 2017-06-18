@@ -1,0 +1,18 @@
+
+<md-content class="md-padding" layout-xs="column">
+	 <div flex-xs layout="column" ng-repeat="photo in favorite_photos" class="cs142-favorite-card">
+	    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+	    <md-card-title>
+		    <md-card-title-text>
+		        <span class="md-headline">Posted by {{photo.user_name}}</span>
+		        <span class="md-subhead">Created time: {{photo.date_time}}</span>
+		    </md-card-title-text>
+	      	<md-card-title-media>
+	        	<img class="md-media-sm card-media" ng-src="../../images/{{photo.file_name}}" ng-click="photoModalDialog($event, photo.file_name)"></img>
+	      	</md-card-title-media>
+	    	<md-card-actions layout="row" layout-align="end center">
+			    <md-button><i class="fa fa-trash deleteFavoritebutton" ng-click="deleteFavorite(photo)"></i></md-button>
+	        </md-card-actions>
+	    </md-card-title>
+	</div>
+</md-content>

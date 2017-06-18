@@ -1,0 +1,14 @@
+.loginForm,.registerForm {
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+}
+
+#loginButton,#registerButton {
+	width: 180px;
+}
+
+#submitButton {
+	width: 390px;
+}

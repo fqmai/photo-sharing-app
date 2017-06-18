@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="cs142App" ng-controller="UserDetailController">
+    <head>
+
+        <title>{{main.title || "CS142 Class Project"}}</title>
+    </head>
+
+    <body layout="column">    	
+		<md-content layout="column" class="cs142-detail-container" layout-padding>
+			<div class="cs142-detail-row"><strong>Name:</strong> {{currentUser.first_name}} {{currentUser.last_name}}</div>
+			<div class="cs142-detail-row"><strong>Location:</strong> {{currentUser.location}}</div>
+			<div class="cs142-detail-row"><strong>Description:</strong> {{currentUser.description}}</div>
+			<div class="cs142-detail-row"><strong>Occupation:</strong> {{currentUser.occupation}}</div>
+			<md-subheader ng-show="!findPhoto">This user has no photo.</md-subheader>
+			<div ng-show="findPhoto" layout="row">
+				
+		        <md-content class="cs142-detail-photo-tags">
+		            <md-list class="cs142-detail-photo-tag">
+		                <md-subheader>Most recent photo</md-subheader>
+		                <md-list-item ng-href="/photo-share.html#!/photos/{{currentUser._id}}" aria-label="close">
+		                    <img ng-src="images/{{mostRecentPhoto.file_name}}" class="md-avatar">
+		                    <div>
+		                        {{mostRecentPhoto.date_time}}
+		                    </div>
+		                </md-list-item>
+		            </md-list>
+		        </md-content>
+
+		        <md-content>
+		            <md-list class="cs142-detail-photo-tag">
+		                <md-subheader>Most comments Photo</md-subheader>
+		                <md-list-item ng-href="/photo-share.html#!/photos/{{currentUser._id}}" aria-label="close">
+		                    <img ng-src="images/{{mostCommentsPhoto.file_name}}" class="md-avatar">
+		                    <div>
+		                        This photo has {{numOfComments}} comments.
+		                    </div>
+		                </md-list-item>
+		            </md-list>
+		        </md-content>
+
+			</div>
+
+			<md-button class="md-primary" class="cs142-detail-row" ng-href="/photo-share.html#!/photos/{{currentUser._id}}">View All Photos</md-button>
+
+		</md-content>
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+body {
+	position: relative;
+}
+
+.cs142-detail-container {
+	margin: 30px;
+	font-size: 18px;
+}
+
+.cs142-detail-row {
+	margin: 8px;
+}
+
+
+md-button {
+	font-weight: bold;
+}

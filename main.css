@@ -1,0 +1,80 @@
+/*
+CSS for the CS142 project #5 main page
+
+Since CSS uses a global name space for classes we should use class names starting with
+cs142-main- here.
+*/
+
+body {
+	font-family: Palatino;
+}
+
+#cs142-main-toolbar {
+	background: #9ACD32;
+	font-size: 20px;
+	font-family: Lithos Pro;
+}
+
+#cs142-main-toolbar-homegreet {
+	margin: 5px;
+	padding: 5px;
+	float: left;
+}
+
+
+#cs142-main-toolbar-greet {
+	color: #20B2AA;
+	font-size: 15px;
+	margin: 5px;
+	margin-left: 10px;
+	padding: 0;
+}
+
+#cs142-main-toolbar-home {
+	margin: 10px;
+	padding: 0;
+	text-decoration: none;
+	color: white;
+}
+
+#cs142-main-toolbar-home:hover {
+	color: white;
+	color: #20B2AA;
+}
+
+#cs142-main-toolbar-pagename {
+	text-align: left;
+	margin-left: 50px;
+	width: 600px;
+}
+
+#cs142-main-toolbar-log {
+	position: fixed;
+	right: 10px;
+	width: 80px;
+}
+
+#cs142-main-toolbar-post {
+	position: fixed;
+	right: 100px;
+}
+
+#cs142-main-toolbar-delete {
+	position: fixed;
+	right: 200px;
+	max-width: 100px;
+}
+
+#cs142-main-toolbar-favorites {
+	position: fixed;
+	right: 300px;
+
+}
+
+.like,.favorite {
+	color: red;
+}
+
+.unlike,.unfavorite {
+	color: gray;
+}
